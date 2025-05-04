@@ -1,0 +1,11 @@
+grpc:
+  server:
+    port: 50051         
+
+management:
+  server:
+    port: 8080
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics

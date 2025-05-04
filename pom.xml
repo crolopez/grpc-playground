@@ -27,5 +27,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <grpc.version>1.72.0</grpc.version>
+        <grpc.starter.version>3.1.0.RELEASE</grpc.starter.version>
+        <java.version>17</java.version>
+        <spring-boot.version>3.4.5</spring-boot.version>
     </properties>
 </project>

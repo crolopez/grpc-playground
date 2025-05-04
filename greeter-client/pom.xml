@@ -1,4 +1,4 @@
-<project>
+<project> 
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.crolopez</groupId>
@@ -18,5 +18,18 @@
       <groupId>io.grpc</groupId>
       <artifactId>grpc-netty-shaded</artifactId>
     </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter</artifactId>
+      <version>${spring-boot.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>net.devh</groupId>
+      <artifactId>grpc-spring-boot-starter</artifactId>
+      <version>${grpc.starter.version}</version>
+    </dependency>
+
   </dependencies>
 </project>

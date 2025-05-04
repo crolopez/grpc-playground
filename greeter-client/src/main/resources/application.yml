@@ -1,0 +1,5 @@
+grpc:
+  client:
+    greeter:
+      address: static://localhost:50051
+      negotiation-type: plaintext

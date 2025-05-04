@@ -37,7 +37,7 @@
   </dependencies>
 
   <build>
-    <sourceDirectory>${project.basedir}</sourceDirectory>
+      <sourceDirectory>${project.basedir}</sourceDirectory>
 
     <extensions>
       <!-- Needed for the plugin to add the generated sources to the compile phase -->
@@ -54,7 +54,7 @@
         <artifactId>protobuf-maven-plugin</artifactId>
         <version>0.6.1</version>
         <configuration>
-          <protoSourceRoot>${project.basedir}</protoSourceRoot> 
+                  <protoSourceRoot>${project.basedir}</protoSourceRoot> 
           
           <!-- Explicitly include ONLY greeter.proto -->
           <includes>
