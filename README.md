@@ -13,7 +13,7 @@ This is a multi-module Maven project:
 
 ## Prerequisites
 
--  JDK (Java Development Kit) - Version 11 or higher recommended.
+-  JDK (Java Development Kit) - Version 17 or higher recommended.
 -  Apache Maven - For building and running the project.
 
 ## Building the Project
@@ -35,17 +35,24 @@ You need to run the server first, followed by the client in separate terminals.
 From the project's root directory, execute:
 
 ```bash
-mvn -pl greeter-server exec:java "-Dexec.mainClass=org.crolopez.grpcplayground.server.GreeterServer"
+mvn -pl greeter-server spring-boot:run
 ```
 
-The server will start and listen for incoming connections on port `50051` (default). You should see output indicating the server has started.
+The server will start using Spring Boot, and listen for incoming connections on port `50051` (as configured in `greeter-server/src/main/resources/application.yml`). You should see Spring Boot logs followed by gRPC server startup messages.
 
 ### 2. Run the Client
 
 Open **another terminal** and, from the project's root directory, execute:
 
 ```bash
-mvn -pl greeter-client exec:java "-Dexec.mainClass=org.crolopez.grpcplayground.client.GreeterClient"
+mvn -pl greeter-client spring-boot:run
 ```
 
-The client will run, send a request to the server (using the name "World" by default), and print the response received from the server to the console, similar to this:
+The client will run as a Spring Boot application, automatically connect to the server configured in `greeter-client/src/main/resources/application.yml`, send a request, print log, and then exit.
+
+You should see output similar to this in the client's console (mixed with Spring Boot logs):
+
+```log
+INFO ... o.c.grpcplayground.client.GreeterClient : Will try to greet Spring Boot Client ...
+INFO ... o.c.grpcplayground.client.GreeterClient : Greeting received: Hello, Spring Boot Client
+```
